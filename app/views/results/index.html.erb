@@ -1,0 +1,8 @@
+<div class="container">
+  <%= link_to "Back", welcome_index_path %>
+  <h1>Closest Venues</h1>
+  <div class="header">
+    Results for location <%= @latitude %>, <%= @longitude %>:
+  </div>
+  <%= render 'results_table' %>
+</div>

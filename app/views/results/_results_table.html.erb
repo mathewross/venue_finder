@@ -1,0 +1,23 @@
+<div id="results-table">
+  <% if @results.present? %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Categories</th>
+          <th>Calculated Distance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @results.each do |result| %>
+          <%= render 'results_row', result: result %>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <div class="no-results">
+      Sorry no results match your search
+    </div>
+  <% end %>
+</div>

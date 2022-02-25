@@ -1,0 +1,16 @@
+ <tr>
+  <td>
+    <%= result['name'] %>
+  </td>
+ <td>
+   <%= result['location']['formatted_address'] %>
+ </td>
+  <td>
+    <% result['categories'].each do |category| %>
+      <%= category['name'] %>
+    <% end %>
+  </td>
+   <td>
+     <%= result['calculated_distance'] %>
+   </td>
+</tr>

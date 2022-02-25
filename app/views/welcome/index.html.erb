@@ -1,0 +1,19 @@
+<h1>Closest Venues</h1>
+<p>Find the nearest venues (such as pubs, restaurants, coffee shops) to a given location provided as latitude and longitude.</p>
+<%= form_for 'post', url: welcome_search_path do |f| %>
+  <div class="field">
+    <%= f.label "Latitude", class: "label" %>
+    <div class="control">
+      <%= f.number_field :latitude, max: 90, min: -90, required: true, step: :any, class: "field" %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label "Longitude", class: "label" %>
+    <div class="control">
+      <%= f.number_field :longitude, max: 180, min: -180, required: true, step: :any, class: "field" %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.submit "Submit", class: "button is-primary" %>
+  </div>
+<% end %>
